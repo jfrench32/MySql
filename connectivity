@@ -1,0 +1,48 @@
+/* connecting, selecting a database, and disconnecting
+
+Problem
+
+You need to establish a connection to the database server and shut down the connection when you're done.
+
+soulution
+
+Each API provides routines for connecting and disconnecting. The connection routines require that you provide parameters specifying
+the host on which the MYSQL server is running and the MYSQL account to use. You can also select a default database.*/
+
+// Connect.java: connect to the MySQL server
+
+import java.sql.*;
+
+public class Connect
+{
+public static void main (String[] args)
+{
+Connection conn=null;
+String url = "jdbc:mysql://localhost/cookbook";
+String userName = "cbuser";
+String password = "cbpass";
+
+try
+{
+Class.forName("com.mysql.jdbc.Driver").newInstance ();
+conn = DriverManager.getConnection (url, userName, password);
+System.out.println ("Connected");
+}
+catch (Exception e)
+{
+System.err.println ("Cannot connect to server");
+System.exit (1);
+}
+if (conn != null)
+{
+try
+{
+conn.close ();
+System.out.println ("Disconnected");
+}
+catch (Exception e) {/* ignore close errors */}
+}
+}
+}
+
+
