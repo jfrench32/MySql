@@ -1,0 +1,24 @@
+/* Writing a MySQL script using JSP and JSTL, with the JSTL tags, we can write a corresponding JSP page that displays database content*/
+
+<%@-- show_content.jsp: displays database content --%>
+
+<%@-- show_content.jsp: displays database content --%>
+<%@-- show_content.jsp: displays database content --%>
+<%@-- show_content.jsp: displays database content --%>
+<html>
+<head><title>database content</title></head>
+<body>
+
+<p>Tables in database:</p>
+
+<sql:query dataSource="${conn}" var="rs">
+SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
+WHERE TABLE_SCHEMA = 'datacontent' ORDER BY TABLE-NAME
+</SQL:query>
+
+<c:forEach items="${rs.rowsByIndex}" var="row">
+<c:out value="${row[0]}" /><br />
+<c:forEach>
+
+</body>
+</html>
