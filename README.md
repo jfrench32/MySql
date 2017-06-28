@@ -47,3 +47,5 @@ Eclipse Info
 
 1. With respect to Dynamic Web Projects, (connector/J) is required in webapps, web-inf in the lib directory. The driver allows your app to connect MySQL with Tomcat.
 2. Now your web server and database are primed to start scripting using JSTL and JSP directives.
+3. Now you can generate web content from query results such as: displaying query results as paragraphs, list, unordered list, definition list, nested list, tables, hyperlinks, and work with nav indexs.
+4. You are also now setup to begin processing web content using MySQL.
