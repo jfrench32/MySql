@@ -41,3 +41,9 @@ Edit the url, user, and password tag attributes if necessary to change the conne
 accessing your database. 
 
 5. restart Tomcat so it notices the changes.
+
+
+Eclipse Info
+
+1. With respect to Dynamic Web Projects, (connector/J) is required in webapps, web-inf in the lib directory. The driver allows your app to connect MySQL with Tomcat.
+2. Now your web server and database are primed to start scripting using JSTL and JSP directives.
