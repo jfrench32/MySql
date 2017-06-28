@@ -1,4 +1,4 @@
-# MySql
+# MySql-Scripting
 
 /* problem: you want to run Java-based programs in a web environment.
 
